@@ -473,7 +473,7 @@ div.info {
     margin: 20px;
 }
 
-.info li {
+div.info li {
     text-align: center;
     padding: 30px;
     display: block;
@@ -482,6 +482,6 @@ div.info {
     border-radius: 100px;
 }
 
-.info h1 {
+div.info h1 {
     color: white;
 }

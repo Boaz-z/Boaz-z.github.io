@@ -1,0 +1,470 @@
+body { /*body*/
+    background-color: #181818;
+}
+
+a {
+    font-family: serif;
+}
+
+nav {
+    display: flex; /*flexbox*/
+    flex-direction: row;
+    justify-content: center; /*center horizontally*/
+    align-items: center; /*center vertically*/
+    position: sticky;
+    top: 10px;
+    font-style: italic;
+    z-index: 2;
+}
+
+hr {
+    width: 90%;
+  }
+
+nav ul {    /*nav div*/
+    list-style: none;
+    text-align: center;
+    width: fit-content;
+    border: 0; /*round border*/
+    border-radius: 10px;
+    padding: 5px;
+    margin: 0;
+    overflow: visible;
+    position: relative;
+    background-color: rgba(20, 20, 20, 0.95);
+    box-shadow: 15px 10px 0 0 rgb(12, 12, 12);
+    transition: all 0.8s ease-in-out;
+    opacity: 1;
+    font-size: 20px;
+}
+
+.hiddennav ul { /*alles wordt transparant*/
+    background: transparent;
+    box-shadow: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+
+.hiddennav ul li { /*alles wordt transparant*/
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(0);
+    transition: all 1s ease-in-out;
+}
+
+.hiddennav a img { /*behalve de img*/
+    background-color: rgba(0, 0, 0, 0.75);
+    margin-top: 50px;
+    padding: 5px;
+    border: 0;
+    border-radius: 10px;
+    box-shadow: 4px 3px 2px 2px rgb(0, 0, 0);
+    display: flex;
+    transform: scale(3);
+    transition: all 0.8s ease-in-out;
+}
+
+.start ul { /*precies hetzelfde als .hiddennav*/
+    background: transparent;
+    box-shadow: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+
+.start ul li { /*precies hetzelfde als .hiddennav*/
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(0);
+    transition: all 1s ease-in-out;
+}
+
+.start a img { /*precies hetzelfde als .hiddennav*/
+    background-color: rgba(7, 7, 7, 0.95);
+    margin-top: 400px;
+    padding: 5px;
+    border: 0;
+    border-radius: 10px;
+    box-shadow: 4px 3px 2px 2px rgb(0, 0, 0);
+    display: flex;
+    transform: scale(15); /*behalve scale*/
+    transition: all 0.8s ease-in-out;
+}
+
+
+nav a img { 
+    display: inline;
+    height: 70%;
+    max-height: 30px;
+    vertical-align: middle;
+    transition: all 0.8s ease-in-out;
+}
+
+nav ul li { /*link boxes in nav*/
+    display: inline-block;
+    position: relative; /*IMPORTANT: dropdown aligning*/
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+  
+nav ul li a { /*text in nav*/
+    border: 0; /*round border*/
+    border-radius: 20px;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 45px;
+    text-decoration: none;
+    left: 50%;
+    transition: all 0.3s ease-in-out;
+}
+  
+nav ul li.index a:hover {
+    transition: all 0.3s ease-in-out;
+    background: rgb(255,0,215);
+    background: linear-gradient(145deg, rgba(255,0,214,1) 5%, rgb(255, 161, 239) 30%, rgba(255,0,214,1) 67%, rgba(255,0,214,1) 90%);
+    padding: 10px 30px;
+    margin-left: 15px;
+    margin-right: 15px;
+    box-shadow: 3px 3px 3px 3px rgba(255, 255, 255, 0.4);
+}
+
+nav ul li.info a:hover {
+    transition: all 0.3s ease-in-out;
+    background: #4614FD;
+    background: linear-gradient(145deg,rgba(70, 20, 253, 1) 5%, rgb(200, 185, 255) 30%, rgba(70, 20, 253, 1) 67%, rgba(70, 20, 253, 1) 90%);
+    padding: 10px 30px;
+    margin-left: 15px;
+    margin-right: 15px;
+    box-shadow: 3px 3px 3px 3px rgba(255, 255, 255, 0.4);
+}
+
+nav ul li ul { /*dropdown*/
+    display: none;
+    position: absolute;
+    background-color: rgba(10, 10, 10, 0.767);
+    padding: 0;
+    list-style: none;
+    top: 100%;
+    left: -10%;
+    min-width: 175px;
+    border: 0;
+    border-radius: 0 0 10px 10px;
+}
+
+nav ul li ul li { /*dropdown link boxes*/
+    display: block;
+}
+
+nav ul li ul li a { /*dropdown link text*/
+    padding: 10px;
+    display: block;
+}
+
+nav ul li:hover ul {
+    display: block;
+}
+
+div ul up {
+    padding: 10px 20px;
+    position: fixed;
+    display: block;
+    border: 0;
+    border-radius: 100px;
+    background-color: rgba(255, 255, 255, 0.03);
+    box-shadow: 10px 5px 0 0 rgba(12, 12, 12, 0.26);
+    bottom: 50px;
+    right: 50px;
+    transition: all 0.3s ease-in-out;
+}
+
+div ul up:hover {
+    box-shadow: 2px 2px 2px 2px rgba(12, 12, 12, 0.26);
+    background-color: rgba(82, 82, 82, 0.03);
+}
+
+div ul up a {
+    color: white;
+    text-decoration: none;
+    font-size: 30px;
+}
+
+.hiddenup {
+    transform: scale(0);
+    background: transparent;
+    box-shadow: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+
+.hiddenup a {
+    transform: scale(0);
+    opacity: 0;
+}
+
+div ul help { /*help box*/
+    position: fixed;
+    display: block;
+    padding: 22px 15px;
+    border: 0;
+    border-radius: 200px;
+    background-color: rgba(255, 255, 255, 0.03);
+    box-shadow: 15px 10px 0 0 rgba(12, 12, 12, 0.26);
+    top: 10px;
+    right: 20px;
+    transition: all 0.5s ease-in-out;
+}
+
+div ul help a { /*help link*/
+    font-size: 20px;
+    font-style: italic;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    transition: all 0.5s ease-in-out;
+}
+
+div ul help:hover { /*help link hover*/
+    background-color: rgba(0, 0, 0, 0);
+    top: 10px;
+    right: 20px;
+    transition: all 0.5s ease-in-out;
+    box-shadow: 2px 2px 2px 2px rgba(12, 12, 12, 0.26);
+}
+
+li::marker { /*gek puntje geen idee waarom het hier staat maar t is nu weg*/
+    content: "";
+}
+
+@font-face { /*dotted font*/
+    font-family: "dotted";
+    src: url(5x5-Dots.ttf.woff) format(woff)
+}
+
+text ul { /*product list*/
+    margin-top: 530px;
+    margin-left: -40px;
+}
+
+text ul li { /*product list individueel*/
+    background-color: rgba(66, 66, 66, 0.034);
+    padding: 0;
+    padding-right: 40px;
+    width: fit-content;
+    border: 0;
+    border-radius: 0 20px 20px 0;
+    transition: all 0.1s ease-in-out
+}
+
+text ul li a { /*product list text*/
+    font-size: 100px;
+    color: rgba(255, 255, 255, 0.527);
+    text-decoration: none;
+    font-family: "dotted";
+    transition: all 0.5s ease-in-out;
+}
+
+.products a {
+    color: rgba(255, 255, 255, 0.527);
+}
+
+.products:hover {
+    background-color: rgba(66, 66, 66, 0.116);
+}
+
+.products:hover a {
+    color: white;
+    transition: all 0.4s ease-in-out;
+}
+
+footer {
+    background: #0a0a0a;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background-color: #181818;
+    border-radius: 0 0 100px 100px;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    margin-bottom: -100px;
+}
+.footer-nav, .footer-social {
+    gap: 150px;
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.footer-nav a, .footer-social a {
+    font-size: 35px;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+.footer-nav .info a:hover, .footer-social .info a:hover {
+    color: rgb(70, 19, 253);
+}
+
+.footer-nav .index a:hover, .footer-social .index a:hover {
+    color: rgb(255,0,215);
+}
+
+.footer-nav .facebook:hover, .footer-social .facebook:hover {
+    color: #0c3080;
+}
+
+.footer-nav .twitter:hover, .footer-social .twitter:hover {
+    color: rgb(29, 161, 242);
+}
+
+.footer-nav .instagram:hover, .footer-social .instagram:hover {
+    color: rgb(225, 48, 108);
+}
+
+.footer-nav .youtube:hover, .footer-social .youtube:hover {
+    color: rgb(205, 32, 31);
+}
+
+.footer-text {
+    margin-top: 10px;
+    font-size: 14px;
+    opacity: 1;
+    transition: color 0.15s ease-in-out;
+}
+
+.footer-text:hover {
+    color: rgb(182, 182, 182)
+}
+
+
+
+.inputtext, .select { /*maakt de textboxes aan*/
+    background-color: rgb(112, 112, 112);
+    width: 95%;
+    padding: 12px;
+    border: 0;
+    border-radius: 40px;
+    box-sizing: content-box;
+    margin: 10px;
+    justify-content: center;
+    display: block;
+    height: 20px;
+    transition: height 0.65s, filter 0.5s;
+}
+  
+  
+.inputtext:hover, .select:hover { /*effect wanneer je hovert*/
+    height: calc(20px * 1.55);
+    filter: drop-shadow(7.5px 5px 5px #706666da);
+}
+
+  
+textarea { /*"message us"*/
+    color: white;
+    background-color: rgb(133, 133, 133);
+    width: 50%;
+    height: 150px;
+    padding: 12px;
+    border: 0;
+    border-radius: 27px;
+    box-sizing: border-box;
+    margin: 10px;
+    transition-duration: height 0.65s;
+    max-width: 96.9%;
+    min-width: 96.9%;
+    min-height: 150px;
+}
+  
+select { /*extra stijl voor select, zodat kleur en grootte even groot zijn als de rest van de textboxen*/
+    color:#ffffff;
+    font-size: 13px;
+    width: 95%;
+}
+  
+  
+.card { /*grote box card met alle textboxen er in*/
+    margin-top: 5%;
+    margin-right: 10%;
+    margin-left: 10%;
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: left;
+    background-color: #272727;
+    padding: 30px;
+    border: 0;
+    border-radius: 30px;
+    max-width: 100%;
+    filter: drop-shadow(15px 10px 10px #00000098);
+    z-index: 1;
+}
+
+label {
+    color: white;
+}
+  
+input[type=text] {
+    color: white;
+}
+
+input[type=submit] { /*submit button*/
+    background-color: #747474;
+    margin: auto;
+    display: block;
+    border-radius: 15px;
+    color: rgb(202, 202, 202);
+    height: 50px;
+    text-align: center;
+    font-size: 20px;
+    transition: all 1.2s;
+}
+
+
+  
+input[type=submit]:hover { /*submit hover effect met transitions*/
+    background-color: #1d1d1d;
+    height: calc(50px * 1.2);
+    font-size: 35px;
+    text-decoration:solid;
+    transition: all 2s;
+}
+  
+.thanks{
+    text-align: center;
+    font-size: 45px;
+}
+
+::placeholder {
+    color: rgb(196, 196, 196);
+}
+
+option {
+    color: white;
+}

@@ -468,3 +468,20 @@ input[type=submit]:hover { /*submit hover effect met transitions*/
 option {
     color: white;
 }
+
+div.info {
+    margin: 20px;
+}
+
+.info li {
+    text-align: center;
+    padding: 30px;
+    display: block;
+    background-color: black;
+    border: 0;
+    border-radius: 100px;
+}
+
+.info h1 {
+    color: white;
+}

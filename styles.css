@@ -474,9 +474,10 @@ div.info {
 }
 
 div.info li {
+    align-items: center;
     text-align: center;
     padding: 30px;
-    display: block;
+    display: flexbox;
     background-color: black;
     border: 0;
     border-radius: 100px;

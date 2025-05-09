@@ -219,9 +219,10 @@ div ul help { /*help box*/
     top: 10px;
     right: 20px;
     transition: all 0.5s ease-in-out;
+    z-index: 100;
 }
 
-div ul help a { /*help link*/
+div ul help li.index a { /*help link*/
     font-size: 20px;
     font-style: italic;
     text-decoration: none;
@@ -229,7 +230,8 @@ div ul help a { /*help link*/
     transition: all 0.5s ease-in-out;
 }
 
-div ul help:hover { /*help link hover*/
+div ul help li.index a:hover { /*help link hover*/
+    color: rgb(255,0,215);
     background-color: rgba(0, 0, 0, 0);
     top: 10px;
     right: 20px;
@@ -469,11 +471,11 @@ option {
     color: white;
 }
 
-div.info {
+div.infop {
     margin: 20px;
 }
 
-div.info li {
+div.infop li {
     align-items: center;
     text-align: center;
     padding: 30px;
@@ -483,6 +485,6 @@ div.info li {
     border-radius: 100px;
 }
 
-div.info h1 {
+div.infop h1 {
     color: white;
 }

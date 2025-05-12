@@ -11,31 +11,26 @@ hr {
 }
 
 nav.index {
-    display: flex; /*flexbox*/
-    flex-direction: row;
-    justify-content: center; /*center horizontally*/
-    align-items: center; /*center vertically*/
     position: sticky;
     top: 10px;
-    font-style: italic;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     z-index: 2;
+    font-style: italic;
+    font-size: 20px;
 }
 
-nav.index ul {    /*nav div*/
-    list-style: none;
-    text-align: center;
-    width: fit-content;
-    border: 0; /*round border*/
+nav.index ul {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-color: rgba(20, 20, 20, 0.95);
+    box-shadow: 10px 10px 10px 0px rgb(255, 0, 215);
     border-radius: 10px;
     padding: 5px;
     margin: 0;
-    overflow: visible;
-    position: relative;
-    background-color: rgba(20, 20, 20, 0.95);
-    box-shadow: 10px 10px 10px 0px rgb(255,0,215);
-    transition: all 0.8s ease-in-out;
-    opacity: 1;
-    font-size: 20px;
+    list-style: none;
 }
 
 nav.index a img { 
@@ -68,7 +63,7 @@ nav.index ul li a { /*text in nav*/
   
 nav.index ul li.index a:hover {
     transition: all 0.3s ease-in-out;
-    background: rgb(255,0,215);
+    background: rgb(255, 0, 215);
     background: linear-gradient(145deg, rgba(255,0,214,1) 5%, rgb(255, 161, 239) 30%, rgba(255,0,214,1) 67%, rgba(255,0,214,1) 90%);
     padding: 10px 30px;
     margin-left: 15px;
@@ -112,32 +107,55 @@ nav.index ul li:hover ul {
     display: block;
 }
 
-nav.info {
-    display: flex; /*flexbox*/
-    flex-direction: row;
-    justify-content: center; /*center horizontally*/
-    align-items: center; /*center vertically*/
-    position: sticky;
-    top: 10px;
-    font-style: italic;
-    z-index: 2;
+.index.hiddennav ul { /*alles wordt transparant*/
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    box-shadow: 0 0 0 0 rgb(0, 0, 0, 0);
 }
 
-nav.info ul {    /*nav div*/
-    list-style: none;
-    text-align: center;
-    width: fit-content;
-    border: 0; /*round border*/
+.index.hiddennav ul li { /*alles wordt transparant*/
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(0);
+    transition: all 1s ease-in-out;
+}
+
+.index.hiddennav a img { /*behalve de img*/
+    background-color: rgba(0, 0, 0, 0.75);
+    margin-top: 50px;
+    padding: 5px;
+    border: 0;
+    border-radius: 10px;
+    box-shadow: 3px 3px 5px 0px rgb(255,0,215);
+    display: flex;
+    transform: scale(3);
+    transition: all 0.8s ease-in-out;
+}
+
+nav.info {
+    position: sticky;
+    top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    font-style: italic;
+    font-size: 20px;
+}
+
+nav.info ul {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-color: rgba(20, 20, 20, 0.95);
+    box-shadow: 10px 10px 10px 0px rgb(70, 19, 253);
     border-radius: 10px;
     padding: 5px;
     margin: 0;
-    overflow: visible;
-    position: relative;
-    background-color: rgba(20, 20, 20, 0.95);
-    box-shadow: 10px 10px 10px 0px rgb(70, 19, 253);
-    transition: all 0.8s ease-in-out;
-    opacity: 1;
-    font-size: 20px;
+    list-style: none;
 }
 
 nav.info a img { 
@@ -166,16 +184,6 @@ nav.info ul li a { /*text in nav*/
     text-decoration: none;
     left: 50%;
     transition: all 0.3s ease-in-out;
-}
-  
-nav.info ul li.index a:hover {
-    transition: all 0.3s ease-in-out;
-    background: rgb(255,0,215);
-    background: linear-gradient(145deg, rgba(255,0,214,1) 5%, rgb(255, 161, 239) 30%, rgba(255,0,214,1) 67%, rgba(255,0,214,1) 90%);
-    padding: 10px 30px;
-    margin-left: 15px;
-    margin-right: 15px;
-    box-shadow: 3px 3px 3px 3px rgba(255, 255, 255, 0.4);
 }
 
 nav.info ul li.info a:hover {
@@ -210,40 +218,40 @@ nav.info ul li ul li a { /*dropdown link text*/
     display: block;
 }
 
-nav.index ul li:hover ul {
+nav.info ul li:hover ul {
     display: block;
 }
 
-
-.hiddennav ul { /*alles wordt transparant*/
+.info.hiddennav ul { /*alles wordt transparant*/
     background: transparent;
-    box-shadow: none;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 0;
+    box-shadow: 0 0 0 0 rgb(0, 0, 0, 0);
 }
 
-.hiddennav ul li { /*alles wordt transparant*/
+.info.hiddennav ul li { /*alles wordt transparant*/
     opacity: 0;
     pointer-events: none;
     transform: scale(0);
     transition: all 1s ease-in-out;
 }
 
-.hiddennav a img { /*behalve de img*/
+.info.hiddennav a img { /*behalve de img*/
     background-color: rgba(0, 0, 0, 0.75);
     margin-top: 50px;
     padding: 5px;
     border: 0;
     border-radius: 10px;
-    box-shadow: 3px 3px 5px 0px rgb(255,0,215);
+    box-shadow: 3px 3px 5px 0px rgb(70, 19, 253);
     display: flex;
     transform: scale(3);
     transition: all 0.8s ease-in-out;
 }
 
-.start ul { /*precies hetzelfde als .hiddennav*/
+
+.index.start ul { /*precies hetzelfde als .hiddennav*/
     background: transparent;
     box-shadow: none;
     display: flex;
@@ -252,47 +260,23 @@ nav.index ul li:hover ul {
     padding: 0;
 }
 
-.start ul li { /*precies hetzelfde als .hiddennav*/
+.index.start ul li { /*precies hetzelfde als .hiddennav*/
     opacity: 0;
     pointer-events: none;
     transform: scale(0);
     transition: all 1s ease-in-out;
 }
 
-.start a img { /*precies hetzelfde als .hiddennav*/
+.index.start a img { /*precies hetzelfde als .hiddennav*/
     background-color: rgba(7, 7, 7, 0.95);
     margin-top: 400px;
     padding: 5px;
     border: 0;
     border-radius: 10px;
-    box-shadow: 4px 3px 2px 2px rgb(0, 0, 0);
+    box-shadow: 1px 2px 1px 1px rgb(255, 0, 215);
     display: flex;
     transform: scale(15); /*behalve scale*/
     transition: all 0.8s ease-in-out;
-}
-
-div ul up {
-    padding: 10px 20px;
-    position: fixed;
-    display: block;
-    border: 0;
-    border-radius: 100px;
-    background-color: rgba(255, 255, 255, 0.03);
-    box-shadow: 5px 3px 5px 0px rgb(255,0,215);
-    bottom: 50px;
-    right: 50px;
-    transition: all 0.3s ease-in-out;
-}
-
-div ul up:hover {
-    box-shadow: 2px 2px 2px 2px rgba(12, 12, 12, 0.26);
-    background-color: rgba(82, 82, 82, 0.03);
-}
-
-div ul up a {
-    color: white;
-    text-decoration: none;
-    font-size: 30px;
 }
 
 .hiddenup {
@@ -310,7 +294,44 @@ div ul up a {
     opacity: 0;
 }
 
-div ul help { /*help box*/
+div.index ul up {
+    padding: 10px 20px;
+    position: fixed;
+    display: block;
+    border: 0;
+    border-radius: 100px;
+    background-color: rgba(255, 255, 255, 0.03);
+    box-shadow: 5px 3px 5px 0px rgb(255,0,215);
+    bottom: 50px;
+    right: 50px;
+    transition: all 0.3s ease-in-out;
+}
+
+div.info ul up {
+    padding: 10px 20px;
+    position: fixed;
+    display: block;
+    border: 0;
+    border-radius: 100px;
+    background-color: rgba(255, 255, 255, 0.03);
+    box-shadow: 5px 3px 5px 0px rgb(70, 19, 253);
+    bottom: 50px;
+    right: 50px;
+    transition: all 0.3s ease-in-out;
+}
+
+div ul up:hover {
+    box-shadow: 2px 2px 2px 2px rgba(12, 12, 12, 0.26);
+    background-color: rgba(82, 82, 82, 0.03);
+}
+
+div ul up a {
+    color: white;
+    text-decoration: none;
+    font-size: 30px;
+}
+
+div.index ul help { /*help box*/
     position: fixed;
     display: block;
     padding: 22px 15px;
@@ -324,13 +345,28 @@ div ul help { /*help box*/
     z-index: 100;
 }
 
+div.info ul help { /*help box*/
+    position: fixed;
+    display: block;
+    padding: 22px 15px;
+    border: 0;
+    border-radius: 200px;
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: 5px 5px 5px 0px rgb(70, 19, 253);
+    top: 10px;
+    right: 20px;
+    transition: all 0.5s ease-in-out;
+    z-index: 100;
+}
+
+
 div ul help:hover { /*help box*/
     position: fixed;
     display: block;
     padding: 22px 15px;
     border: 0;
     border-radius: 200px;
-    background-color: rgba(255, 255, 255, 0);
+    background-color: rgba(255, 255, 255, 0.014);
     box-shadow: 7px 5px 0 0 rgba(12, 12, 12, 0.25);
     top: 10px;
     right: 20px;
@@ -346,9 +382,16 @@ div ul help li.index a { /*help link*/
     transition: all 0.5s ease-in-out;
 }
 
-div ul help li.index a:hover { /*help link hover*/
+div.index ul help li a:hover { /*help link hover*/
     color: rgb(255,0,215);
-    background-color: rgba(0, 0, 0, 0);
+    top: 10px;
+    right: 20px;
+    transition: all 0.5s ease-in-out;
+    box-shadow: 2px 2px 2px 2px rgba(12, 12, 12, 0.26);
+}
+
+div.info ul help li.index a:hover { /*help link hover*/
+    color: rgb(70, 19, 253);
     top: 10px;
     right: 20px;
     transition: all 0.5s ease-in-out;
@@ -412,7 +455,7 @@ footer {
     align-items: center;
 }
 
-footer::before {
+footer.index::before {
     content: "";
     position: absolute;
     top: 0;
@@ -421,6 +464,18 @@ footer::before {
     height: 100px;
     background-color: #181818;
     box-shadow: 0 15px 10px 0 rgb(255,0,215);
+    border-radius: 0 0 100px 100px;
+}
+
+footer.info::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background-color: #181818;
+    box-shadow: 0 15px 10px 0 rgb(70, 19, 253);
     border-radius: 0 0 100px 100px;
 }
 

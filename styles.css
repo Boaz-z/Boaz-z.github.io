@@ -10,7 +10,7 @@ hr {
     width: 90%;
 }
 
-nav.index {
+nav {
     position: sticky;
     top: 10px;
     display: flex;
@@ -21,19 +21,26 @@ nav.index {
     font-size: 20px;
 }
 
-nav.index ul {
+nav ul {
     position: relative;
     display: flex;
     align-items: center;
     background-color: rgba(20, 20, 20, 0.95);
-    box-shadow: 10px 10px 10px 0px rgb(255, 0, 215);
     border-radius: 10px;
     padding: 5px;
     margin: 0;
     list-style: none;
 }
 
-nav.index a img { 
+nav.index ul {
+    box-shadow: 10px 10px 10px 0px rgb(255, 0, 215);
+}
+
+nav.info ul {
+    box-shadow: 10px 10px 10px 0px rgb(70, 19, 253);
+}
+
+nav a img { 
     display: inline;
     height: 70%;
     max-height: 30px;
@@ -41,7 +48,7 @@ nav.index a img {
     transition: all 0.8s ease-in-out;
 }
 
-nav.index ul li { /*link boxes in nav*/
+nav ul li { /*link boxes in nav*/
     display: inline-block;
     position: relative; /*IMPORTANT: dropdown aligning*/
     opacity: 1;
@@ -49,7 +56,7 @@ nav.index ul li { /*link boxes in nav*/
 }
 
   
-nav.index ul li a { /*text in nav*/
+nav ul li a { /*text in nav*/
     border: 0; /*round border*/
     border-radius: 20px;
     display: block;
@@ -61,27 +68,25 @@ nav.index ul li a { /*text in nav*/
     transition: all 0.3s ease-in-out;
 }
   
-nav.index ul li.index a:hover {
+nav ul li a:hover {
     transition: all 0.3s ease-in-out;
+    padding: 10px 30px;
+    margin-left: 15px;
+    margin-right: 15px;
+    box-shadow: 3px 3px 3px 3px rgba(255, 255, 255, 0.4);
+}
+
+nav ul li.index a:hover {
     background: rgb(255, 0, 215);
     background: linear-gradient(145deg, rgba(255,0,214,1) 5%, rgb(255, 161, 239) 30%, rgba(255,0,214,1) 67%, rgba(255,0,214,1) 90%);
-    padding: 10px 30px;
-    margin-left: 15px;
-    margin-right: 15px;
-    box-shadow: 3px 3px 3px 3px rgba(255, 255, 255, 0.4);
 }
 
-nav.index ul li.info a:hover {
-    transition: all 0.3s ease-in-out;
+nav ul li.info a:hover {
     background: #4614FD;
     background: linear-gradient(145deg,rgba(70, 20, 253, 1) 5%, rgb(200, 185, 255) 30%, rgba(70, 20, 253, 1) 67%, rgba(70, 20, 253, 1) 90%);
-    padding: 10px 30px;
-    margin-left: 15px;
-    margin-right: 15px;
-    box-shadow: 3px 3px 3px 3px rgba(255, 255, 255, 0.4);
 }
 
-nav.index ul li ul { /*dropdown*/
+nav ul li ul { /*dropdown*/
     display: none;
     position: absolute;
     background-color: rgba(10, 10, 10, 0.767);
@@ -94,16 +99,16 @@ nav.index ul li ul { /*dropdown*/
     border-radius: 0 0 10px 10px;
 }
 
-nav.index ul li ul li { /*dropdown link boxes*/
+nav ul li ul li { /*dropdown link boxes*/
     display: block;
 }
 
-nav.index ul li ul li a { /*dropdown link text*/
+nav ul li ul li a { /*dropdown link text*/
     padding: 10px;
     display: block;
 }
 
-nav.index ul li:hover ul {
+nav ul li:hover ul {
     display: block;
 }
 
@@ -133,93 +138,6 @@ nav.index ul li:hover ul {
     display: flex;
     transform: scale(3);
     transition: all 0.8s ease-in-out;
-}
-
-nav.info {
-    position: sticky;
-    top: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 2;
-    font-style: italic;
-    font-size: 20px;
-}
-
-nav.info ul {
-    position: relative;
-    display: flex;
-    align-items: center;
-    background-color: rgba(20, 20, 20, 0.95);
-    box-shadow: 10px 10px 10px 0px rgb(70, 19, 253);
-    border-radius: 10px;
-    padding: 5px;
-    margin: 0;
-    list-style: none;
-}
-
-nav.info a img { 
-    display: inline;
-    height: 70%;
-    max-height: 30px;
-    vertical-align: middle;
-    transition: all 0.8s ease-in-out;
-}
-
-nav.info ul li { /*link boxes in nav*/
-    display: inline-block;
-    position: relative; /*IMPORTANT: dropdown aligning*/
-    opacity: 1;
-    transition: opacity 0.5s ease-in-out;
-}
-
-  
-nav.info ul li a { /*text in nav*/
-    border: 0; /*round border*/
-    border-radius: 20px;
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 45px;
-    text-decoration: none;
-    left: 50%;
-    transition: all 0.3s ease-in-out;
-}
-
-nav.info ul li.info a:hover {
-    transition: all 0.3s ease-in-out;
-    background: #4614FD;
-    background: linear-gradient(145deg,rgba(70, 20, 253, 1) 5%, rgb(200, 185, 255) 30%, rgba(70, 20, 253, 1) 67%, rgba(70, 20, 253, 1) 90%);
-    padding: 10px 30px;
-    margin-left: 15px;
-    margin-right: 15px;
-    box-shadow: 3px 3px 3px 3px rgba(255, 255, 255, 0.4);
-}
-
-nav.info ul li ul { /*dropdown*/
-    display: none;
-    position: absolute;
-    background-color: rgba(10, 10, 10, 0.767);
-    padding: 5px;
-    list-style: none;
-    top: 100%;
-    left: -10%;
-    min-width: 175px;
-    border: 0;
-    border-radius: 0 0 10px 10px;
-}
-
-nav.info ul li ul li { /*dropdown link boxes*/
-    display: block;
-}
-
-nav.info ul li ul li a { /*dropdown link text*/
-    padding: 10px;
-    display: block;
-}
-
-nav.info ul li:hover ul {
-    display: block;
 }
 
 .info.hiddennav ul { /*alles wordt transparant*/
@@ -294,30 +212,24 @@ nav.info ul li:hover ul {
     opacity: 0;
 }
 
-div.index ul up {
+div ul up {
     padding: 10px 20px;
     position: fixed;
     display: block;
     border: 0;
     border-radius: 100px;
     background-color: rgba(255, 255, 255, 0.03);
-    box-shadow: 5px 3px 5px 0px rgb(255,0,215);
     bottom: 50px;
     right: 50px;
     transition: all 0.3s ease-in-out;
 }
 
+div.index ul up {
+    box-shadow: 5px 3px 5px 0px rgb(255,0,215);
+}
+
 div.info ul up {
-    padding: 10px 20px;
-    position: fixed;
-    display: block;
-    border: 0;
-    border-radius: 100px;
-    background-color: rgba(255, 255, 255, 0.03);
     box-shadow: 5px 3px 5px 0px rgb(70, 19, 253);
-    bottom: 50px;
-    right: 50px;
-    transition: all 0.3s ease-in-out;
 }
 
 div ul up:hover {
@@ -331,34 +243,26 @@ div ul up a {
     font-size: 30px;
 }
 
-div.index ul help { /*help box*/
+div ul help { /*help box*/
     position: fixed;
     display: block;
     padding: 22px 15px;
     border: 0;
     border-radius: 200px;
     background-color: rgba(0, 0, 0, 0.5);
+    top: 10px;
+    right: 20px;
+    transition: all 0.5s ease-in-out;
+    z-index: 100;
+}
+
+div.index ul help {
     box-shadow: 5px 5px 5px 0px rgb(255,0,215);
-    top: 10px;
-    right: 20px;
-    transition: all 0.5s ease-in-out;
-    z-index: 100;
 }
 
-div.info ul help { /*help box*/
-    position: fixed;
-    display: block;
-    padding: 22px 15px;
-    border: 0;
-    border-radius: 200px;
-    background-color: rgba(0, 0, 0, 0.5);
+div.info ul help {
     box-shadow: 5px 5px 5px 0px rgb(70, 19, 253);
-    top: 10px;
-    right: 20px;
-    transition: all 0.5s ease-in-out;
-    z-index: 100;
 }
-
 
 div ul help:hover { /*help box*/
     position: fixed;
@@ -382,24 +286,62 @@ div ul help li.index a { /*help link*/
     transition: all 0.5s ease-in-out;
 }
 
-div.index ul help li a:hover { /*help link hover*/
-    color: rgb(255,0,215);
+div ul help li a:hover { /*help link hover*/
     top: 10px;
     right: 20px;
     transition: all 0.5s ease-in-out;
     box-shadow: 2px 2px 2px 2px rgba(12, 12, 12, 0.26);
 }
 
-div.info ul help li.index a:hover { /*help link hover*/
+div.index ul help li a:hover {
+    color: rgb(255,0,215);
+}
+
+div.info ul help li a:hover {
     color: rgb(70, 19, 253);
+}
+
+div ul search {
+    position: fixed;
+    display: block;
+    padding: 20px 15px;
+    border: 0;
+    border-radius: 200px;
+    background-color: rgba(0, 0, 0, 0.5);
     top: 10px;
-    right: 20px;
+    left: 20px;
     transition: all 0.5s ease-in-out;
-    box-shadow: 2px 2px 2px 2px rgba(12, 12, 12, 0.26);
+    z-index: 100;
+}
+
+div.index ul search {
+    box-shadow: 5px 5px 5px 0px rgb(255,0,215);
+}
+
+div.info ul search {
+    box-shadow: 5px 5px 5px 0px rgb(70, 19, 253);
+}
+
+
+div ul search li input[type=text] {
+    border: none;
+    width: 500px;
+    box-shadow: none;
+    font-size: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: all 0.5s ease-in-out;
+}
+
+div ul search li input[type=text]::placeholder {
+    text-align: center;
+}
+
+div ul search li input[type=text]:placeholder-shown {
+    width: 35px;
 }
 
 li::marker { /*gek puntje geen idee waarom het hier staat maar t is nu weg*/
-    content: "";
+    display: none;
 }
 
 @font-face { /*dotted font*/

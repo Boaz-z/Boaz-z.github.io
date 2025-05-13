@@ -25,19 +25,19 @@ nav ul {
     position: relative;
     display: flex;
     align-items: center;
-    background-color: rgba(20, 20, 20, 0.95);
-    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.95);
+    border-radius: 30px;
     padding: 5px;
     margin: 0;
     list-style: none;
 }
 
 nav.index ul {
-    box-shadow: 10px 10px 10px 0px rgb(255, 0, 215);
+    box-shadow: 8px 8px 10px 0px rgb(255, 0, 215);
 }
 
 nav.info ul {
-    box-shadow: 10px 10px 10px 0px rgb(70, 19, 253);
+    box-shadow: 8px 8px 10px 0px rgb(70, 19, 253);
 }
 
 nav a img { 
@@ -96,7 +96,7 @@ nav ul li ul { /*dropdown*/
     left: -10%;
     min-width: 175px;
     border: 0;
-    border-radius: 0 0 10px 10px;
+    border-radius: 30px;
 }
 
 nav ul li ul li { /*dropdown link boxes*/
@@ -218,7 +218,7 @@ div ul up {
     display: block;
     border: 0;
     border-radius: 100px;
-    background-color: rgba(255, 255, 255, 0.03);
+    background-color: rgba(0, 0, 0, 0.75);
     bottom: 50px;
     right: 50px;
     transition: all 0.3s ease-in-out;
@@ -340,7 +340,7 @@ div ul search li input[type=text]:placeholder-shown {
     width: 35px;
 }
 
-li::marker { /*gek puntje geen idee waarom het hier staat maar t is nu weg*/
+::marker { /*gek puntje geen idee waarom het hier staat maar t is nu weg*/
     display: none;
 }
 
@@ -439,7 +439,7 @@ footer.info::before {
 }
 .footer-nav a, .footer-social a {
     font-style: italic;
-    font-size: 35px;
+    font-size: 20px;
     color: white;
     text-decoration: none;
     transition: all 0.3s;
@@ -471,7 +471,7 @@ footer.info::before {
 .footer-text {
     font-style: italic;
     margin-top: 10px;
-    font-size: 14px;
+    font-size: 12px;
     opacity: 1;
     transition: color 0.15s ease-in-out;
 }
@@ -588,7 +588,10 @@ option {
 }
 
 div.infop {
-    margin: 20px;
+    margin-left: 500px;
+    margin-right: 500px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 div.infop li {

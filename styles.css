@@ -388,10 +388,11 @@ text ul li a { /*product list text*/
 footer {
     background: #0a0a0a;
     color: white;
-    padding: 20px 0;
+    padding-top: 60px;
+    padding-bottom: 40px;
     text-align: center;
     position: relative;
-    height: 400px;
+    height: 250px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -469,8 +470,8 @@ footer.info::before {
 }
 
 .footer-text {
+    margin-top: -10px;
     font-style: italic;
-    margin-top: 10px;
     font-size: 12px;
     opacity: 1;
     transition: color 0.15s ease-in-out;

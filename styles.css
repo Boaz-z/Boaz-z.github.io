@@ -303,7 +303,7 @@ div.info ul help li a:hover {
 
 div ul search {
     position: fixed;
-    display: block;
+    display: flex;
     padding: 20px 15px;
     border: 0;
     border-radius: 200px;
@@ -324,8 +324,9 @@ div.info ul search {
 
 
 div ul search li input[type=text] {
+    color: white;
     border: none;
-    width: 500px;
+    width: 400px;
     box-shadow: none;
     font-size: 20px;
     background-color: rgba(0, 0, 0, 0.5);
@@ -338,6 +339,16 @@ div ul search li input[type=text]::placeholder {
 
 div ul search li input[type=text]:placeholder-shown {
     width: 35px;
+}
+
+div ul search input[type=submit] {
+    font-size: 15px;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+div ul search input[type=submit]:placeholder-shown {
+    display: none;
 }
 
 ::marker { /*gek puntje geen idee waarom het hier staat maar t is nu weg*/
@@ -549,11 +560,11 @@ label {
     color: white;
 }
   
-input[type=text] {
+div.card input[type=text] {
     color: white;
 }
 
-input[type=submit] { /*submit button*/
+div.card input[type=submit] { /*submit button*/
     background-color: #747474;
     margin: auto;
     display: block;
@@ -567,7 +578,7 @@ input[type=submit] { /*submit button*/
 
 
   
-input[type=submit]:hover { /*submit hover effect met transitions*/
+div.card input[type=submit]:hover { /*submit hover effect met transitions*/
     background-color: #1d1d1d;
     height: calc(50px * 1.2);
     font-size: 35px;

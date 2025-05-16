@@ -301,7 +301,7 @@ div.info ul help li a:hover {
     color: rgb(70, 19, 253);
 }
 
-div ul search {
+div ul .search {
     position: fixed;
     display: flex;
     padding: 20px 15px;
@@ -311,19 +311,19 @@ div ul search {
     top: 10px;
     left: 20px;
     transition: all 0.5s ease-in-out;
-    z-index: 100;
+    z-index: 50;
 }
 
-div.index ul search {
+div.index ul .search {
     box-shadow: 5px 5px 5px 0px rgb(255,0,215);
 }
 
-div.info ul search {
+div.info ul .search {
     box-shadow: 5px 5px 5px 0px rgb(70, 19, 253);
 }
 
 
-div ul search li input[type=text] {
+div ul .search input[type=text] {
     color: white;
     border: none;
     width: 400px;
@@ -333,18 +333,32 @@ div ul search li input[type=text] {
     transition: all 0.5s ease-in-out;
 }
 
-div ul search li input[type=text]::placeholder {
+div ul .search input[type=text]::placeholder {
     text-align: center;
 }
 
-div ul search li input[type=text]:placeholder-shown {
+div ul .search input[type=text]:placeholder-shown {
     width: 35px;
 }
 
-div ul search li input[type=submit] {
+div ul .search input[type=submit] {
+    z-index: 100;
+    position: fixed;
+    top: 30px;
+    left: 400px;
     font-size: 15px;
     border-radius: 20px;
     background-color: rgba(0, 0, 0, 0);
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.5s ease-in-out;
+}
+
+div ul .search input[type=submit].inactive {
+    z-index: 0;
+    top: 30px;
+    left: 55px;
+    opacity: 0;
 }
 
 ::marker { /*gek puntje geen idee waarom het hier staat maar t is nu weg*/

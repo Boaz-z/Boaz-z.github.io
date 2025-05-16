@@ -1,11 +1,14 @@
 let a = 0; //mouse not on logo
 let b = 0; //.start not active
 
+const input = document.getElementById("input");
+const submit = document.querySelector(".search input[type=submit]");
 const navbar = document.querySelector("nav");
 const divup = document.querySelector("div ul up");
 
 window.addEventListener("load", function () {
     //add .start on load
+    submit.classList.add("inactive");
     navbar.classList.add("start");
     divup.classList.add("hiddenup");
     b = 1;
@@ -50,20 +53,10 @@ window.addEventListener("scroll", function () {
         }
     });
 
-    
-    const textInput = document.querySelector("div ul .search li input[type=text]");
-    const submitButton = document.querySelector("div ul .search input[type=submit]");
-    
-document.querySelector("div ul .search li input[type=text]").addEventListener('input', toggleSubmitButton() );  {
-
-    if (textInput.matches(':placeholder-shown')) {
-        submitButton.style.display = 'none';
-    } else {
-        submitButton.style.display = 'block';
-    }
-}
-
-
-
-
-
+input.addEventListener("input", () => {
+  if (input.value.trim() === "") {
+    submit.classList.add("inactive");
+  } else {
+    submit.classList.remove("inactive");
+  }
+});

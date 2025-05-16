@@ -341,14 +341,10 @@ div ul search li input[type=text]:placeholder-shown {
     width: 35px;
 }
 
-div ul search input[type=submit] {
+div ul search li input[type=submit] {
     font-size: 15px;
     border-radius: 20px;
     background-color: rgba(0, 0, 0, 0);
-}
-
-div ul search input[type=submit]:placeholder-shown {
-    display: none;
 }
 
 ::marker { /*gek puntje geen idee waarom het hier staat maar t is nu weg*/

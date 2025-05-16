@@ -49,3 +49,21 @@ window.addEventListener("scroll", function () {
             navbar.classList.add("hiddennav")
         }
     });
+
+    
+    const textInput = document.querySelector("div ul .search li input[type=text]");
+    const submitButton = document.querySelector("div ul .search input[type=submit]");
+    
+document.querySelector("div ul .search li input[type=text]").addEventListener('input', toggleSubmitButton() );  {
+
+    if (textInput.matches(':placeholder-shown')) {
+        submitButton.style.display = 'none';
+    } else {
+        submitButton.style.display = 'block';
+    }
+}
+
+
+
+
+

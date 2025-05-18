@@ -42,13 +42,18 @@
             </help>
         </ul>
     </div>
-    <div class="info">
-        <ul>
-            <search>
-                <li class="index"><input type="text" placeholder="🔍"><input type="submit" value="🔍"></li>
-            </search>
-        </ul>
-    </div>
+<div class="info">
+    <ul>
+        <li>
+            <div class="search">
+                <form onsubmit="return handleSearch(event)">
+                    <input type="text" placeholder="🔍" id="input">
+                    <input type="submit" value="🔍">
+                </form>
+            </div>
+        </li>
+    </ul>
+</div>
     <br><br><br><br><br><br><br>
     <div class="infop">
         <li>

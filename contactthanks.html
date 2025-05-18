@@ -42,13 +42,18 @@
             </help>
         </ul>
     </div>
-    <div class="info">
-        <ul>
-            <search>
-                <li class="index"><input type="text" placeholder="🔍"><input type="submit" value="🔍"></li>
-            </search>
-        </ul>
-    </div>
+<div class="info">
+    <ul>
+        <li>
+            <div class="search">
+                <form onsubmit="return handleSearch(event)">
+                    <input type="text" placeholder="🔍" id="input">
+                    <input type="submit" value="🔍">
+                </form>
+            </div>
+        </li>
+    </ul>
+</div>
     <div style="text-align: center;">
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 <h1 style="color: white; font-size: 100px; font-weight: 1000;">Thank you for contacting us!</h1>

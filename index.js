@@ -6,7 +6,7 @@ const submit = document.querySelector(".search input[type=submit]");
 const navbar = document.querySelector("nav");
 const divup = document.querySelector("div ul up");
 
-window.addEventListener("load", function () {
+window.addEventListener("load", function () { //adds all needed classes that are hidden until a certain action
     //add .start on load
     submit.classList.add("inactive");
     navbar.classList.add("start");
@@ -53,10 +53,41 @@ window.addEventListener("scroll", function () {
         }
     });
 
-input.addEventListener("input", () => {
+input.addEventListener("input", () => { //submit button vanishes when input === ""
   if (input.value.trim() === "") {
     submit.classList.add("inactive");
   } else {
     submit.classList.remove("inactive");
   }
 });
+
+  async function handleSearch(event) {
+    event.preventDefault(); //essential
+    event = event || window.event;
+
+    const query = document.getElementById('input').value.toLowerCase().trim(); //query = input without spaces and lowercase
+
+    if (query === "") { //if there's no input, don't do anything
+    return false;
+  }
+
+    try {
+      const response = await fetch('products.json'); //product list
+      const products = await response.json();
+
+      const match = products.find(product =>
+        product.name.toLowerCase().trim() === query //if the search matches a product in the json file, match gets named to the name of that .html match. If there's no match, it's nothing.
+      );
+
+      if (match) { //if match exists (so not nothing)
+        window.location.href = match.url; //product name from .json file turns into .url
+      } else {
+        alert("We couldn't find what you were looking for.");
+      }
+
+    } catch (error) {
+      alert("Search failed."); //error message
+    }
+
+    return false;
+  }

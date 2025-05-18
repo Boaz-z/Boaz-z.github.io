@@ -45,8 +45,10 @@
     <ul>
         <li>
             <div class="search">
-                <input type="text" placeholder="🔍" id="input">
-                <input type="submit" value="🔍">
+                <form onsubmit="return handleSearch(event)">
+                    <input type="text" placeholder="🔍" id="input">
+                    <input type="submit" value="🔍">
+                </form>
             </div>
         </li>
     </ul>

@@ -16,7 +16,7 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 2;
+    z-index: 100;
     font-style: italic;
     font-size: 20px;
 }
@@ -38,6 +38,10 @@ nav.index ul {
 
 nav.info ul {
     box-shadow: 8px 8px 10px 0px rgb(70, 19, 253);
+}
+
+nav.productp ul {
+    box-shadow: 8px 8px 10px 0px rgb(255 ,235 ,5);
 }
 
 nav a img { 
@@ -86,6 +90,13 @@ nav ul li.info a:hover {
     background: linear-gradient(145deg,rgba(70, 20, 253, 1) 5%, rgb(200, 185, 255) 30%, rgba(70, 20, 253, 1) 67%, rgba(70, 20, 253, 1) 90%);
 }
 
+nav ul li.productp a:hover {
+    color: black;
+    font-weight: 900;
+    background: rgb(255 ,235 ,5);
+    background: linear-gradient(145deg,rgba(255, 235, 5, 1) 5%, rgba(255, 255, 255, 1) 30%, rgba(255, 235, 5, 1) 67%, rgba(255, 235, 5, 1) 90%);
+}
+
 nav ul li ul { /*dropdown*/
     display: none;
     position: absolute;
@@ -121,7 +132,7 @@ nav ul li:hover ul {
     box-shadow: 0 0 0 0 rgb(0, 0, 0, 0);
 }
 
-.index.hiddennav ul li { /*alles wordt transparant*/
+.index.hiddennav ul li {
     opacity: 0;
     pointer-events: none;
     transform: scale(0);
@@ -135,6 +146,34 @@ nav ul li:hover ul {
     border: 0;
     border-radius: 10px;
     box-shadow: 3px 3px 5px 0px rgb(255,0,215);
+    display: flex;
+    transform: scale(3);
+    transition: all 0.8s ease-in-out;
+}
+
+.productp.hiddennav ul { /*alles wordt transparant*/
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    box-shadow: 0 0 0 0 rgb(0, 0, 0, 0);
+}
+
+.productp.hiddennav ul li { /*alles wordt transparant*/
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(0);
+    transition: all 1s ease-in-out;
+}
+
+.productp.hiddennav a img { /*behalve de img*/
+    background-color: rgba(0, 0, 0, 0.75);
+    margin-top: 50px;
+    padding: 5px;
+    border: 0;
+    border-radius: 10px;
+    box-shadow: 3px 3px 5px 0px rgb(255 ,235 ,5);
     display: flex;
     transform: scale(3);
     transition: all 0.8s ease-in-out;
@@ -232,6 +271,10 @@ div.info ul up {
     box-shadow: 5px 3px 5px 0px rgb(70, 19, 253);
 }
 
+div.productp ul up {
+    box-shadow: 5px 3px 5px 0px rgb(255 ,235 ,5);
+}
+
 div ul up:hover {
     box-shadow: 2px 2px 2px 2px rgba(12, 12, 12, 0.26);
     background-color: rgba(82, 82, 82, 0.03);
@@ -264,6 +307,10 @@ div.info ul help {
     box-shadow: 5px 5px 5px 0px rgb(70, 19, 253);
 }
 
+div.productp ul help {
+    box-shadow: 5px 5px 5px 0px rgb(255 ,235 ,5);
+}
+
 div ul help:hover { /*help box*/
     position: fixed;
     display: block;
@@ -278,7 +325,7 @@ div ul help:hover { /*help box*/
     z-index: 100;
 }
 
-div ul help li.index a { /*help link*/
+div ul help li a { /*help link*/
     font-size: 20px;
     font-style: italic;
     text-decoration: none;
@@ -301,6 +348,10 @@ div.info ul help li a:hover {
     color: rgb(70, 19, 253);
 }
 
+div.productp ul help li a:hover {
+    color: rgb(255 ,235 ,5);
+}
+
 div ul .search {
     position: fixed;
     display: flex;
@@ -311,7 +362,7 @@ div ul .search {
     top: 10px;
     left: 20px;
     transition: all 0.5s ease-in-out;
-    z-index: 50;
+    z-index: 500;
 }
 
 div.index ul .search {
@@ -322,8 +373,13 @@ div.info ul .search {
     box-shadow: 5px 5px 5px 0px rgb(70, 19, 253);
 }
 
+div.productp ul .search {
+    box-shadow: 5px 5px 5px 0px rgb(255 ,235 ,5);
+}
+
 
 div ul .search input[type=text] {
+    z-index: 1000;
     color: white;
     border: none;
     width: 400px;
@@ -443,6 +499,18 @@ footer.info::before {
     border-radius: 0 0 100px 100px;
 }
 
+footer.productp::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background-color: #181818;
+    box-shadow: 0 15px 10px 0 rgb(255 ,235 ,5);
+    border-radius: 0 0 100px 100px;
+}
+
 .footer-container {
     display: flex;
     flex-direction: column;
@@ -472,6 +540,10 @@ footer.info::before {
 
 .footer-nav .index a:hover, .footer-social .index a:hover {
     color: rgb(255,0,215);
+}
+
+.footer-nav .productp a:hover, .footer-social .index a:hover {
+    color: rgb(255 ,235 ,5);
 }
 
 .footer-nav .facebook:hover, .footer-social .facebook:hover {

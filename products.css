@@ -26,7 +26,7 @@
     position: relative; /* Belangrijk voor absolute positioning van de lagen */
     width: 385px;
     height: 385px;
-    margin: 10px;
+    margin: 2rem;
     vertical-align: top;
     overflow: hidden;
 }
@@ -63,6 +63,3 @@
 .gallerij .voorgrond:hover {
     opacity: 0.5;
 }
-
-
-  

@@ -1,3 +1,6 @@
+.allProducts {
+    display: inline-block;
+}
 
 .achtergrond {
     transition: all 0.2s ease-in-out;
@@ -44,7 +47,6 @@
     width: 60%;
     height: 60%;
 }
-
 
 .gallerij .voorgrond {
     opacity: 1;

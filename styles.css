@@ -57,6 +57,7 @@ nav ul li { /*link boxes in nav*/
     position: relative; /*IMPORTANT: dropdown aligning*/
     opacity: 1;
     transition: opacity 0.5s ease-in-out;
+    list-style: none;
 }
 
   
@@ -137,6 +138,7 @@ nav ul li:hover ul {
     pointer-events: none;
     transform: scale(0);
     transition: all 1s ease-in-out;
+    list-style: none;
 }
 
 .index.hiddennav a img { /*behalve de img*/
@@ -165,6 +167,7 @@ nav ul li:hover ul {
     pointer-events: none;
     transform: scale(0);
     transition: all 1s ease-in-out;
+    list-style: none;
 }
 
 .productp.hiddennav a img { /*behalve de img*/
@@ -193,6 +196,7 @@ nav ul li:hover ul {
     pointer-events: none;
     transform: scale(0);
     transition: all 1s ease-in-out;
+    list-style: none;
 }
 
 .info.hiddennav a img { /*behalve de img*/
@@ -222,6 +226,7 @@ nav ul li:hover ul {
     pointer-events: none;
     transform: scale(0);
     transition: all 1s ease-in-out;
+    list-style: none;
 }
 
 .index.start a img { /*precies hetzelfde als .hiddennav*/
@@ -323,6 +328,10 @@ div ul help:hover { /*help box*/
     right: 20px;
     transition: all 0.5s ease-in-out;
     z-index: 100;
+}
+
+div ul help li {
+    list-style: none;
 }
 
 div ul help li a { /*help link*/
@@ -438,7 +447,8 @@ text ul li { /*product list individueel*/
     width: fit-content;
     border: 0;
     border-radius: 0 20px 20px 0;
-    transition: all 0.1s ease-in-out
+    transition: all 0.1s ease-in-out;
+    list-style: none;
 }
 
 text ul li a { /*product list text*/
@@ -682,8 +692,8 @@ option {
 }
 
 div.infop {
-    margin-left: 500px;
-    margin-right: 500px;
+    margin-left: 20%;
+    margin-right: 20%;
     margin-top: 20px;
     margin-bottom: 20px;
 }
@@ -696,6 +706,7 @@ div.infop li {
     background-color: black;
     border: 0;
     border-radius: 100px;
+    list-style: none;
 }
 
 div.infop h1 {

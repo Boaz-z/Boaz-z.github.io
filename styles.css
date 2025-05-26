@@ -1,4 +1,5 @@
-body { /*body*/
+body {
+    /*body*/
     background-color: #181818;
 }
 
@@ -41,10 +42,10 @@ nav.info ul {
 }
 
 nav.productp ul {
-    box-shadow: 8px 8px 10px 0px rgb(255 ,235 ,5);
+    box-shadow: 8px 8px 10px 0px rgb(255, 235, 5);
 }
 
-nav a img { 
+nav a img {
     display: inline;
     height: 70%;
     max-height: 30px;
@@ -52,17 +53,21 @@ nav a img {
     transition: all 0.8s ease-in-out;
 }
 
-nav ul li { /*link boxes in nav*/
+nav ul li {
+    /*link boxes in nav*/
     display: inline-block;
-    position: relative; /*IMPORTANT: dropdown aligning*/
+    position: relative;
+    /*IMPORTANT: dropdown aligning*/
     opacity: 1;
     transition: opacity 0.5s ease-in-out;
     list-style: none;
 }
 
-  
-nav ul li a { /*text in nav*/
-    border: 0; /*round border*/
+
+nav ul li a {
+    /*text in nav*/
+    border: 0;
+    /*round border*/
     border-radius: 20px;
     display: block;
     color: white;
@@ -72,7 +77,7 @@ nav ul li a { /*text in nav*/
     left: 50%;
     transition: all 0.3s ease-in-out;
 }
-  
+
 nav ul li a:hover {
     transition: all 0.3s ease-in-out;
     padding: 10px 30px;
@@ -83,22 +88,23 @@ nav ul li a:hover {
 
 nav ul li.index a:hover {
     background: rgb(255, 0, 215);
-    background: linear-gradient(145deg, rgba(255,0,214,1) 5%, rgb(255, 161, 239) 30%, rgba(255,0,214,1) 67%, rgba(255,0,214,1) 90%);
+    background: linear-gradient(145deg, rgba(255, 0, 214, 1) 5%, rgb(255, 161, 239) 30%, rgba(255, 0, 214, 1) 67%, rgba(255, 0, 214, 1) 90%);
 }
 
 nav ul li.info a:hover {
     background: #4614FD;
-    background: linear-gradient(145deg,rgba(70, 20, 253, 1) 5%, rgb(200, 185, 255) 30%, rgba(70, 20, 253, 1) 67%, rgba(70, 20, 253, 1) 90%);
+    background: linear-gradient(145deg, rgba(70, 20, 253, 1) 5%, rgb(200, 185, 255) 30%, rgba(70, 20, 253, 1) 67%, rgba(70, 20, 253, 1) 90%);
 }
 
 nav ul li.productp a:hover {
     color: black;
     font-weight: 900;
-    background: rgb(255 ,235 ,5);
-    background: linear-gradient(145deg,rgba(255, 235, 5, 1) 5%, rgba(255, 255, 255, 1) 30%, rgba(255, 235, 5, 1) 67%, rgba(255, 235, 5, 1) 90%);
+    background: rgb(255, 235, 5);
+    background: linear-gradient(145deg, rgba(255, 235, 5, 1) 5%, rgba(255, 255, 255, 1) 30%, rgba(255, 235, 5, 1) 67%, rgba(255, 235, 5, 1) 90%);
 }
 
-nav ul li ul { /*dropdown*/
+nav ul li ul {
+    /*dropdown*/
     display: none;
     position: absolute;
     background-color: rgba(10, 10, 10, 0.767);
@@ -111,11 +117,13 @@ nav ul li ul { /*dropdown*/
     border-radius: 30px;
 }
 
-nav ul li ul li { /*dropdown link boxes*/
+nav ul li ul li {
+    /*dropdown link boxes*/
     display: block;
 }
 
-nav ul li ul li a { /*dropdown link text*/
+nav ul li ul li a {
+    /*dropdown link text*/
     padding: 10px;
     display: block;
 }
@@ -124,7 +132,8 @@ nav ul li:hover ul {
     display: block;
 }
 
-.index.hiddennav ul { /*alles wordt transparant*/
+.index.hiddennav ul {
+    /*alles wordt transparant*/
     background: transparent;
     display: flex;
     justify-content: center;
@@ -141,19 +150,21 @@ nav ul li:hover ul {
     list-style: none;
 }
 
-.index.hiddennav a img { /*behalve de img*/
+.index.hiddennav a img {
+    /*behalve de img*/
     background-color: rgba(0, 0, 0, 0.75);
     margin-top: 50px;
     padding: 5px;
     border: 0;
     border-radius: 10px;
-    box-shadow: 3px 3px 5px 0px rgb(255,0,215);
+    box-shadow: 3px 3px 5px 0px rgb(255, 0, 215);
     display: flex;
     transform: scale(3);
     transition: all 0.8s ease-in-out;
 }
 
-.productp.hiddennav ul { /*alles wordt transparant*/
+.productp.hiddennav ul {
+    /*alles wordt transparant*/
     background: transparent;
     display: flex;
     justify-content: center;
@@ -162,7 +173,8 @@ nav ul li:hover ul {
     box-shadow: 0 0 0 0 rgb(0, 0, 0, 0);
 }
 
-.productp.hiddennav ul li { /*alles wordt transparant*/
+.productp.hiddennav ul li {
+    /*alles wordt transparant*/
     opacity: 0;
     pointer-events: none;
     transform: scale(0);
@@ -170,19 +182,21 @@ nav ul li:hover ul {
     list-style: none;
 }
 
-.productp.hiddennav a img { /*behalve de img*/
+.productp.hiddennav a img {
+    /*behalve de img*/
     background-color: rgba(0, 0, 0, 0.75);
     margin-top: 50px;
     padding: 5px;
     border: 0;
     border-radius: 10px;
-    box-shadow: 3px 3px 5px 0px rgb(255 ,235 ,5);
+    box-shadow: 3px 3px 5px 0px rgb(255, 235, 5);
     display: flex;
     transform: scale(3);
     transition: all 0.8s ease-in-out;
 }
 
-.info.hiddennav ul { /*alles wordt transparant*/
+.info.hiddennav ul {
+    /*alles wordt transparant*/
     background: transparent;
     display: flex;
     justify-content: center;
@@ -191,7 +205,8 @@ nav ul li:hover ul {
     box-shadow: 0 0 0 0 rgb(0, 0, 0, 0);
 }
 
-.info.hiddennav ul li { /*alles wordt transparant*/
+.info.hiddennav ul li {
+    /*alles wordt transparant*/
     opacity: 0;
     pointer-events: none;
     transform: scale(0);
@@ -199,7 +214,8 @@ nav ul li:hover ul {
     list-style: none;
 }
 
-.info.hiddennav a img { /*behalve de img*/
+.info.hiddennav a img {
+    /*behalve de img*/
     background-color: rgba(0, 0, 0, 0.75);
     margin-top: 50px;
     padding: 5px;
@@ -212,7 +228,8 @@ nav ul li:hover ul {
 }
 
 
-.index.start ul { /*precies hetzelfde als .hiddennav*/
+.index.start ul {
+    /*precies hetzelfde als .hiddennav*/
     background: transparent;
     box-shadow: none;
     display: flex;
@@ -221,7 +238,8 @@ nav ul li:hover ul {
     padding: 0;
 }
 
-.index.start ul li { /*precies hetzelfde als .hiddennav*/
+.index.start ul li {
+    /*precies hetzelfde als .hiddennav*/
     opacity: 0;
     pointer-events: none;
     transform: scale(0);
@@ -229,7 +247,8 @@ nav ul li:hover ul {
     list-style: none;
 }
 
-.index.start a img { /*precies hetzelfde als .hiddennav*/
+.index.start a img {
+    /*precies hetzelfde als .hiddennav*/
     background-color: rgba(7, 7, 7, 0.95);
     margin-top: 400px;
     padding: 5px;
@@ -237,7 +256,8 @@ nav ul li:hover ul {
     border-radius: 10px;
     box-shadow: 1px 2px 1px 1px rgb(255, 0, 215);
     display: flex;
-    transform: scale(15); /*behalve scale*/
+    transform: scale(15);
+    /*behalve scale*/
     transition: all 0.8s ease-in-out;
 }
 
@@ -269,7 +289,7 @@ div ul up {
 }
 
 div.index ul up {
-    box-shadow: 5px 3px 5px 0px rgb(255,0,215);
+    box-shadow: 5px 3px 5px 0px rgb(255, 0, 215);
 }
 
 div.info ul up {
@@ -277,7 +297,7 @@ div.info ul up {
 }
 
 div.productp ul up {
-    box-shadow: 5px 3px 5px 0px rgb(255 ,235 ,5);
+    box-shadow: 5px 3px 5px 0px rgb(255, 235, 5);
 }
 
 div ul up:hover {
@@ -291,7 +311,8 @@ div ul up a {
     font-size: 30px;
 }
 
-div ul help { /*help box*/
+div ul help {
+    /*help box*/
     position: fixed;
     display: block;
     padding: 22px 15px;
@@ -305,7 +326,7 @@ div ul help { /*help box*/
 }
 
 div.index ul help {
-    box-shadow: 5px 5px 5px 0px rgb(255,0,215);
+    box-shadow: 5px 5px 5px 0px rgb(255, 0, 215);
 }
 
 div.info ul help {
@@ -313,10 +334,11 @@ div.info ul help {
 }
 
 div.productp ul help {
-    box-shadow: 5px 5px 5px 0px rgb(255 ,235 ,5);
+    box-shadow: 5px 5px 5px 0px rgb(255, 235, 5);
 }
 
-div ul help:hover { /*help box*/
+div ul help:hover {
+    /*help box*/
     position: fixed;
     display: block;
     padding: 22px 15px;
@@ -334,7 +356,8 @@ div ul help li {
     list-style: none;
 }
 
-div ul help li a { /*help link*/
+div ul help li a {
+    /*help link*/
     font-size: 20px;
     font-style: italic;
     text-decoration: none;
@@ -342,7 +365,8 @@ div ul help li a { /*help link*/
     transition: all 0.5s ease-in-out;
 }
 
-div ul help li a:hover { /*help link hover*/
+div ul help li a:hover {
+    /*help link hover*/
     top: 10px;
     right: 20px;
     transition: all 0.5s ease-in-out;
@@ -350,7 +374,7 @@ div ul help li a:hover { /*help link hover*/
 }
 
 div.index ul help li a:hover {
-    color: rgb(255,0,215);
+    color: rgb(255, 0, 215);
 }
 
 div.info ul help li a:hover {
@@ -358,7 +382,7 @@ div.info ul help li a:hover {
 }
 
 div.productp ul help li a:hover {
-    color: rgb(255 ,235 ,5);
+    color: rgb(255, 235, 5);
 }
 
 div ul .search {
@@ -375,7 +399,7 @@ div ul .search {
 }
 
 div.index ul .search {
-    box-shadow: 5px 5px 5px 0px rgb(255,0,215);
+    box-shadow: 5px 5px 5px 0px rgb(255, 0, 215);
 }
 
 div.info ul .search {
@@ -383,7 +407,7 @@ div.info ul .search {
 }
 
 div.productp ul .search {
-    box-shadow: 5px 5px 5px 0px rgb(255 ,235 ,5);
+    box-shadow: 5px 5px 5px 0px rgb(255, 235, 5);
 }
 
 
@@ -426,21 +450,25 @@ div ul .search input[type=submit].inactive {
     opacity: 0;
 }
 
-::marker { /*gek puntje geen idee waarom het hier staat maar t is nu weg*/
+::marker {
+    /*gek puntje geen idee waarom het hier staat maar t is nu weg*/
     display: none;
 }
 
-@font-face { /*dotted font*/
+@font-face {
+    /*dotted font*/
     font-family: "dotted";
     src: url(5x5-Dots.ttf.woff) format(woff)
 }
 
-text ul { /*product list*/
+text ul {
+    /*product list*/
     margin-top: 530px;
     margin-left: -40px;
 }
 
-text ul li { /*product list individueel*/
+text ul li {
+    /*product list individueel*/
     background-color: rgba(66, 66, 66, 0.034);
     padding: 0;
     padding-right: 40px;
@@ -451,7 +479,8 @@ text ul li { /*product list individueel*/
     list-style: none;
 }
 
-text ul li a { /*product list text*/
+text ul li a {
+    /*product list text*/
     font-size: 100px;
     color: rgba(255, 255, 255, 0.527);
     text-decoration: none;
@@ -493,7 +522,7 @@ footer.index::before {
     width: 100%;
     height: 100px;
     background-color: #181818;
-    box-shadow: 0 15px 10px 0 rgb(255,0,215);
+    box-shadow: 0 15px 10px 0 rgb(255, 0, 215);
     border-radius: 0 0 100px 100px;
 }
 
@@ -517,7 +546,7 @@ footer.productp::before {
     width: 100%;
     height: 100px;
     background-color: #181818;
-    box-shadow: 0 15px 10px 0 rgb(255 ,235 ,5);
+    box-shadow: 0 15px 10px 0 rgb(255, 235, 5);
     border-radius: 0 0 100px 100px;
 }
 
@@ -529,7 +558,9 @@ footer.productp::before {
     width: 100%;
     margin-bottom: -100px;
 }
-.footer-nav, .footer-social {
+
+.footer-nav,
+.footer-social {
     gap: 150px;
     display: flex;
     list-style: none;
@@ -537,38 +568,48 @@ footer.productp::before {
     margin-top: 30px;
     margin-bottom: 30px;
 }
-.footer-nav a, .footer-social a {
+
+.footer-nav a,
+.footer-social a {
     font-style: italic;
     font-size: 20px;
     color: white;
     text-decoration: none;
     transition: all 0.3s;
 }
-.footer-nav .info a:hover, .footer-social .info a:hover {
+
+.footer-nav .info a:hover,
+.footer-social .info a:hover {
     color: rgb(70, 19, 253);
 }
 
-.footer-nav .index a:hover, .footer-social .index a:hover {
-    color: rgb(255,0,215);
+.footer-nav .index a:hover,
+.footer-social .index a:hover {
+    color: rgb(255, 0, 215);
 }
 
-.footer-nav .productp a:hover, .footer-social .index a:hover {
-    color: rgb(255 ,235 ,5);
+.footer-nav .productp a:hover,
+.footer-social .index a:hover {
+    color: rgb(255, 235, 5);
 }
 
-.footer-nav .facebook:hover, .footer-social .facebook:hover {
+.footer-nav .facebook:hover,
+.footer-social .facebook:hover {
     color: #0c3080;
 }
 
-.footer-nav .twitter:hover, .footer-social .twitter:hover {
+.footer-nav .twitter:hover,
+.footer-social .twitter:hover {
     color: rgb(29, 161, 242);
 }
 
-.footer-nav .instagram:hover, .footer-social .instagram:hover {
+.footer-nav .instagram:hover,
+.footer-social .instagram:hover {
     color: rgb(225, 48, 108);
 }
 
-.footer-nav .youtube:hover, .footer-social .youtube:hover {
+.footer-nav .youtube:hover,
+.footer-social .youtube:hover {
     color: rgb(205, 32, 31);
 }
 
@@ -586,7 +627,9 @@ footer.productp::before {
 
 
 
-.inputtext, .select { /*maakt de textboxes aan*/
+.inputtext,
+.select {
+    /*maakt de textboxes aan*/
     background-color: rgb(112, 112, 112);
     width: 95%;
     padding: 12px;
@@ -599,15 +642,18 @@ footer.productp::before {
     height: 20px;
     transition: height 0.65s, filter 0.5s;
 }
-  
-  
-.inputtext:hover, .select:hover { /*effect wanneer je hovert*/
+
+
+.inputtext:hover,
+.select:hover {
+    /*effect wanneer je hovert*/
     height: calc(20px * 1.55);
     filter: drop-shadow(7.5px 5px 5px #706666da);
 }
 
-  
-textarea { /*"message us"*/
+
+textarea {
+    /*"message us"*/
     color: white;
     background-color: rgb(133, 133, 133);
     width: 50%;
@@ -622,15 +668,17 @@ textarea { /*"message us"*/
     min-width: 96.9%;
     min-height: 150px;
 }
-  
-select { /*extra stijl voor select, zodat kleur en grootte even groot zijn als de rest van de textboxen*/
-    color:#ffffff;
+
+select {
+    /*extra stijl voor select, zodat kleur en grootte even groot zijn als de rest van de textboxen*/
+    color: #ffffff;
     font-size: 13px;
     width: 95%;
 }
-  
-  
-.card { /*grote box card met alle textboxen er in*/
+
+
+.card {
+    /*grote box card met alle textboxen er in*/
     margin-top: 5%;
     margin-right: 10%;
     margin-left: 10%;
@@ -651,12 +699,13 @@ select { /*extra stijl voor select, zodat kleur en grootte even groot zijn als d
 label {
     color: white;
 }
-  
+
 div.card input[type=text] {
     color: white;
 }
 
-div.card input[type=submit] { /*submit button*/
+div.card input[type=submit] {
+    /*submit button*/
     background-color: #747474;
     margin: auto;
     display: block;
@@ -669,16 +718,17 @@ div.card input[type=submit] { /*submit button*/
 }
 
 
-  
-div.card input[type=submit]:hover { /*submit hover effect met transitions*/
+
+div.card input[type=submit]:hover {
+    /*submit hover effect met transitions*/
     background-color: #1d1d1d;
     height: calc(50px * 1.2);
     font-size: 35px;
-    text-decoration:solid;
+    text-decoration: solid;
     transition: all 2s;
 }
-  
-.thanks{
+
+.thanks {
     text-align: center;
     font-size: 45px;
 }

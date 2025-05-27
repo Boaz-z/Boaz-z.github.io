@@ -627,8 +627,7 @@ footer.productp::before {
 
 
 
-.inputtext,
-.select {
+.inputtext, .select {
     /*maakt de textboxes aan*/
     background-color: rgb(112, 112, 112);
     width: 95%;
@@ -644,8 +643,7 @@ footer.productp::before {
 }
 
 
-.inputtext:hover,
-.select:hover {
+.inputtext:hover, .select:hover {
     /*effect wanneer je hovert*/
     height: calc(20px * 1.55);
     filter: drop-shadow(7.5px 5px 5px #706666da);
@@ -761,4 +759,75 @@ div.infop li {
 
 div.infop h1 {
     color: white;
+}
+
+div.center {
+    display: flex;
+    justify-content: center;
+}
+
+div.productCard {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    background-color: black;
+    margin: 60px;
+    margin-left: 150px;
+    margin-right: 150px;
+    width: 75%;
+    height: 1000px;
+    box-shadow: 15px 15px 10px 0 rgb(255, 235, 5);
+    border-radius: 100px 100px 100px 100px;
+}
+
+div.productImgBox {
+    border-radius: 75px 75px 75px 75px;
+    display: flex;
+    background: #4f4f4f;
+    background: linear-gradient(142deg, rgba(79, 79, 79, 1) 0%, rgba(20, 20, 20, 1) 100%);
+    margin-left: 50px;
+    margin-right: 25px;
+    height: 80%;
+    width: 80%;
+    justify-content: center;
+}
+
+div.productImg {
+    margin: 50px;
+    border-radius: 50px 50px 50px 50px;
+    height: 50%;
+    width: 75%;
+    background-color: rgba(255, 255, 255, 0.705);
+}
+
+div.productImg img {
+    height: 100%;
+    width: 100%;
+}
+
+div.productDesc {
+    border-radius: 75px 75px 75px 75px;
+    display: block;
+    background-color: rgb(24, 24, 24);
+    margin-left: 25px;
+    margin-right: 50px;
+    height: 80%;
+    width: 80%;
+    text-align: left;
+}
+
+div.productTitle {
+    margin: 50px;
+    color: white;
+    font-size: 75px;
+    font-weight: 1000;
+}
+
+div.productSubtitle {
+    margin-top: -40px;
+    margin-left: 50px;
+    color: grey;
+    font-size: 25px;
+    font-weight: bold;
 }

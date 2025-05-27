@@ -766,8 +766,9 @@ div.center {
     justify-content: center;
 }
 
-div.productCard {
-    align-items: center;
+div.productBox {
+    padding-top: 50px;
+    align-items: flex-start;
     justify-content: center;
     display: flex;
     flex-direction: row;
@@ -782,39 +783,56 @@ div.productCard {
 }
 
 div.productImgBox {
+    align-items: center;
     border-radius: 75px 75px 75px 75px;
     display: flex;
-    background: #4f4f4f;
-    background: linear-gradient(142deg, rgba(79, 79, 79, 1) 0%, rgba(20, 20, 20, 1) 100%);
+    flex-direction: column;
+    background: #2e2d2d;
+    background: linear-gradient(145deg, rgba(46, 45, 45, 1) 0%, rgba(24, 24, 24, 1) 69%);
     margin-left: 50px;
     margin-right: 25px;
     height: 80%;
     width: 80%;
-    justify-content: center;
+    box-shadow: 7px 7px 10px 0 rgb(255, 235, 5);
 }
 
 div.productImg {
+    display: flex;
+    justify-content: center;
     margin: 50px;
     border-radius: 50px 50px 50px 50px;
-    height: 50%;
-    width: 75%;
-    background-color: rgba(255, 255, 255, 0.705);
+    height: 70%;
+    width: 100%;
 }
 
 div.productImg img {
     height: 100%;
-    width: 100%;
+    width: auto;
+    aspect-ratio: auto;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 50px;
+    box-shadow: 10px 5px 10px 0 black;
 }
 
-div.productDesc {
+div.productInfo {
     border-radius: 75px 75px 75px 75px;
     display: block;
-    background-color: rgb(24, 24, 24);
+    background: #181818;
+    background: linear-gradient(145deg, rgba(24, 24, 24, 1) 31%, rgba(46, 45, 45, 1) 100%);
     margin-left: 25px;
     margin-right: 50px;
-    height: 80%;
-    width: 80%;
+    height: 70%;
+    width: 50%;
     text-align: left;
+    box-shadow: 7px 7px 10px 0 rgb(255, 235, 5);
+}
+
+div.productTitles {
+    margin-left: 20px;
+    padding-bottom: 10px;
+    box-shadow: 10px 5px 10px 0 black;
+    border-radius: 20px;
+    width: 90%;
 }
 
 div.productTitle {
@@ -830,4 +848,124 @@ div.productSubtitle {
     color: grey;
     font-size: 25px;
     font-weight: bold;
+}
+
+div.productDescr {
+    margin: 40px;
+    color: white;
+    font-size: 20px;
+}
+
+div.productColorBox {
+    width: 90%;
+    margin: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+div.productColor {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+div.productColor button {
+    display: block;
+    border-width: 3px;
+    border-color: black;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    box-shadow: 10px 5px 10px 0 black;
+    transition: all 0.1s ease-in-out;
+}
+
+div.productColor button:hover {
+    box-shadow: 5px 2px 5px 0 black;
+}
+
+div.productColor button:focus {
+    border-color: white;
+    transform: scale(1.2);
+}
+
+div.productColor .red {
+    background-color: red;
+}
+
+div.productColor .blue {
+    background-color: blue;
+}
+
+div.productColor .green {
+    background-color: green;
+}
+
+div.productColor .white {
+    background-color: white;
+}
+
+div.productColor .black {
+    background-color: black;
+}
+
+div.productCartBox {
+    margin-top: 125px;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+}
+
+div.productCartSmallBox {
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    width: 60%;
+    justify-content: center;
+    background-color: rgb(255, 235, 5);
+    border-width: 5px;
+    border-color: white;
+    border-radius: 50px;
+}
+
+div.productAmount select {
+    background-color: rgb(255, 249, 183);
+    height: 75px;
+    width: 75px;
+    border-radius: 50%;
+    border: 0;
+    color: black;
+    font-size: 30px;
+}
+
+div.productAmount option {
+    color: black;
+    text-align: center;
+}
+
+div.productAddToCard {
+    margin-left: 40px;
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+    height: 75px;
+    width: 100%;
+    font-weight: 1000;
+}
+
+div.productAddToCard button {
+    height: 100%;
+    width: 100%;
+    background-color: rgb(255, 235, 5);
+    border: none;
+    border-radius: 50px;
+    padding: 20px;
+    font-size: 30px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.productAddToCard button:hover {
+    background-color: rgb(255, 242, 94);
 }

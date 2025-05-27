@@ -87,3 +87,28 @@ async function handleSearch(event) {
 
   return false;
 }
+
+let hue = 0;
+
+function hueRed() {
+    hue = 0;
+    document.getElementById("productImage").style.filter = `hue-rotate(${hue}deg)`;
+}
+
+function hueBlue() {
+    hue = 225;
+    document.getElementById("productImage").style.filter = `hue-rotate(${hue}deg)`;
+}
+
+function hueGreen() {
+    hue = 90;
+    document.getElementById("productImage").style.filter = `hue-rotate(${hue}deg)`;
+}
+
+function hueWhite() {
+    document.getElementById("productImage").style.filter = `saturate(0) brightness(200%)`;
+}
+
+function hueBlack() {
+    document.getElementById("productImage").style.filter = `saturate(0) brightness(0.3)`;
+}

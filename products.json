@@ -1,146 +1,146 @@
 [
     {
         "name": "Big Red Button",
-        "url": "Big Red Button.html"
+        "url": "../productPages/Big Red Button.html"
     },
     {
         "name": "Money Printer",
-        "url": "Money Printer.html"
+        "url": "../productPages/Money Printer.html"
     },
     {
         "name": "Forbidden Soup",
-        "url": "Forbidden Soup.html"
+        "url": "../productPages/Forbidden Soup.html"
     },
     {
         "name": "Fake Gold Bar",
-        "url": "Fake Gold Bar.html"
+        "url": "../productPages/Fake Gold Bar.html"
     },
     {
         "name": "100% Useless",
-        "url": "100 Useless.html"
+        "url": "../productPages/100 Useless.html"
     },
     {
         "name": "Cloud Sneakrs",
-        "url": "Cloud Sneakrs.html"
+        "url": "../productPages/Cloud Sneakrs.html"
     },
     {
         "name": "NFTouchable",
-        "url": "NFTouchable.html"
+        "url": "../productPages/NFTouchable.html"
     },
     {
         "name": "Reverse Watch",
-        "url": "Reverse Watch.html"
+        "url": "../productPages/Reverse Watch.html"
     },
     {
         "name": "Mystery Meat",
-        "url": "Mystery Meat.html"
+        "url": "../productPages/Mystery Meat.html"
     },
     {
         "name": "Glitch Cube",
-        "url": "Glitch Cube.html"
+        "url": "../productPages/Glitch Cube.html"
     },
     {
         "name": "Infinite Receipt",
-        "url": "Infinite Receipt.html"
+        "url": "../productPages/Infinite Receipt.html"
     },
     {
         "name": "Scam Coin",
-        "url": "Scam Coin.html"
+        "url": "../productPages/Scam Coin.html"
     },
     {
         "name": "loud silence",
-        "url": "Loud Silence.html"
+        "url": "../productPages/Loud Silence.html"
     },
     {
         "name": "free real estate",
-        "url": "Free Real Estate.html"
+        "url": "../productPages/Free Real Estate.html"
     },
     {
         "name": "wrong number",
-        "url": "Wrong Number.html"
+        "url": "../productPages/Wrong Number.html"
     },
     {
         "name": "ai girlfriend",
-        "url": "AI Girlfriend.html"
+        "url": "../productPages/AI Girlfriend.html"
     },
     {
         "name": "invisible hat",
-        "url": "Invisible Hat.html"
+        "url": "../productPages/Invisible Hat.html"
     },
     {
         "name": "sad clown nose",
-        "url": "Sad Clown Nose.html"
+        "url": "/productPages/Sad Clown Nose.html"
     },
     {
         "name": "bootleg rolex",
-        "url": "Bootleg Rolex.html"
+        "url": "../productPages/Bootleg Rolex.html"
     },
     {
         "name": "legal loophole",
-        "url": "Legal Loophole.html"
+        "url": "../productPages/Legal Loophole.html"
     },
     {
         "name": "home",
-        "url": "index.html"
+        "url": "../productPages/index.html"
     },
     {
         "name": "products",
-        "url": "products.html"
+        "url": "../products.html"
     },
     {
         "name": "random",
-        "url": "products.html#random"
+        "url": "../products.html#random"
     },
     {
         "name": "clothing",
-        "url": "products.html#clothing"
+        "url": "../products.html#clothing"
     },
     {
         "name": "help",
-        "url": "help.html"
+        "url": "../help.html"
     },
     {
         "name": "designers",
-        "url": "designers.html"
+        "url": "../designers.html"
     },
     {
         "name": "contact",
-        "url": "contact.html"
+        "url": "../contact.html"
     },
     {
         "name": "contact us",
-        "url": "contact.html"
+        "url": "../contact.html"
     },
     {
         "name": "business",
-        "url": "business.html"
+        "url": "../business.html"
     },
     {
         "name": "company",
-        "url": "business.html"
+        "url": "../business.html"
     },
     {
         "name": "news articles",
-        "url": "articles.html"
+        "url": "../articles.html"
     },
     {
         "name": "articles",
-        "url": "articles.html"
+        "url": "../articles.html"
     },
     {
         "name": "news",
-        "url": "announcements.html"
+        "url": "../announcements.html"
     },
     {
         "name": "announcements",
-        "url": "announcements.html"
+        "url": "../.html"
     },
     {
         "name": "about us",
-        "url": "about us.html"
+        "url": "../about us.html"
     },
     {
         "name": "about",
-        "url": "about us.html"
+        "url": "../about us.html"
     }
 ]

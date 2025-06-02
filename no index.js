@@ -112,3 +112,85 @@ function hueWhite() {
 function hueBlack() {
     document.getElementById("productImage").style.filter = `saturate(0) brightness(0.3)`;
 }
+
+const cart = JSON.parse(localStorage.getItem('shoppingCart')) || [];
+
+function saveCart() {
+  localStorage.setItem('shoppingCart', JSON.stringify(cart));
+}
+
+function addToCart(itemName) { //adds itemname to cart
+  const quantitySelect = document.getElementById('productAmount');
+  const quantity = parseInt(quantitySelect.value);
+
+  //if item is already in cart
+  const existingItem = cart.find(item => item.name === itemName);
+
+  if (existingItem) {
+    existingItem.quantity = quantity; // Replace quantity
+  } else {
+    cart.push({ name: itemName, quantity: quantity }); // Add new item
+  }
+
+  saveCart();            // Save after adding
+  updateCartDisplay();
+}
+
+function updateCartDisplay() {
+  const cartList = document.getElementById('cartList');
+  cartList.innerHTML = '';
+
+  cart.forEach(item => {
+    const li = document.createElement('li');
+
+
+    // Item name
+    li.textContent = (item.name + "     ");
+
+
+    // Decrease button
+    const decreaseBtn = document.createElement('button');
+    decreaseBtn.textContent = '–';
+    decreaseBtn.onclick = () => {
+      if (item.quantity > 1) {
+        item.quantity--;
+      } else {
+        cart.splice(cart.indexOf(item), 1); // remove if 0
+      }
+      saveCart();
+      updateCartDisplay();
+    };
+    li.appendChild(decreaseBtn);
+
+
+    // Quantity display
+    const quantitySpan = document.createElement('span');
+    quantitySpan.textContent = item.quantity > 0 ? ` (x${item.quantity})` : '';
+    li.appendChild(quantitySpan);
+
+
+    // Increase button
+    const increaseBtn = document.createElement('button');
+    increaseBtn.textContent = '+';
+    increaseBtn.onclick = () => {
+      item.quantity++;
+      saveCart();
+      updateCartDisplay();
+    };
+    li.appendChild(increaseBtn);
+
+    cartList.appendChild(li);
+  });
+}
+
+function removeFromCart(itemName) {
+  const index = cart.findIndex(item => item.name === itemName);
+  if (index !== -1) {
+    cart.splice(index, 1);
+    saveCart();          // Save after removing
+    updateCartDisplay();
+  }
+}
+
+// Call on page load to show saved cart
+updateCartDisplay();

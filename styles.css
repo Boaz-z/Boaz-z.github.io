@@ -11,6 +11,10 @@ hr {
     width: 75%;
 }
 
+ul {
+    list-style-type: none;
+}
+
 nav {
     position: sticky;
     top: 10px;
@@ -448,11 +452,6 @@ div ul .search input[type=submit].inactive {
     top: 30px;
     left: 55px;
     opacity: 0;
-}
-
-::marker {
-    /*gek puntje geen idee waarom het hier staat maar t is nu weg*/
-    display: none;
 }
 
 @font-face {
@@ -930,7 +929,8 @@ div.productCartSmallBox {
     border-radius: 50px;
 }
 
-div.productAmount select {
+#productAmountForm select {
+    text-align: center;
     background-color: rgb(255, 249, 183);
     height: 75px;
     width: 75px;
@@ -940,13 +940,14 @@ div.productAmount select {
     font-size: 30px;
 }
 
-div.productAmount option {
+#productAmountForm option {
     color: black;
     text-align: center;
 }
 
 div.productAddToCard {
-    margin-left: 40px;
+    margin-left: 10px;
+    margin-right: 10px;
     display: flex;
     flex-direction: row;
     text-align: left;
@@ -956,6 +957,7 @@ div.productAddToCard {
 }
 
 div.productAddToCard button {
+    text-decoration: none;
     height: 100%;
     width: 100%;
     background-color: rgb(255, 235, 5);
@@ -968,4 +970,37 @@ div.productAddToCard button {
 
 .productAddToCard button:hover {
     background-color: rgb(255, 242, 94);
+}
+
+#cart {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    font-size: 40px;
+}
+
+#cartList {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    gap: 10px;
+    box-shadow: 15px 10px 30px 0 black;
+    border-radius: 20px;
+    width: 20%;
+}
+
+#cartList button {
+    background-color: #0a0a0a13;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    color: white;
+    font-size: 20px;
+}
+
+#cartList span {
+    font-size: 30px;
 }

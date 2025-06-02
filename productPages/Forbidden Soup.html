@@ -89,8 +89,8 @@
                 </div>
                 <div class="productCartBox">
                     <div class="productCartSmallBox">
-                        <div class="productAmount">
-                            <select>
+                        <form id="productAmountForm">
+                            <select id="productAmount">
                                 <option value="1">1</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
@@ -101,14 +101,18 @@
                                 <option value="8">8</option>
                                 <option value="9">9</option>
                             </select>
-                        </div>
+                        </form>
                         <div class="productAddToCard">
-                            <button>Add to Cart</button>
+                            <button onclick="addToCart('Forbidden Soup')">Add to Cart</button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
+    <div id="cart">
+        <h1>Your Shopping Cart</h1>
+        <ul id="cartList"></ul>
     </div>
     <footer class="productp"> <!--footer-->
         <div class="footer-container">

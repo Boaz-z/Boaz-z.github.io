@@ -91,26 +91,26 @@ async function handleSearch(event) {
 let hue = 0;
 
 function hueRed() {
-    hue = 0;
-    document.getElementById("productImage").style.filter = `hue-rotate(${hue}deg)`;
+  hue = 0;
+  document.getElementById("productImage").style.filter = `hue-rotate(${hue}deg)`;
 }
 
 function hueBlue() {
-    hue = 225;
-    document.getElementById("productImage").style.filter = `hue-rotate(${hue}deg)`;
+  hue = 225;
+  document.getElementById("productImage").style.filter = `hue-rotate(${hue}deg)`;
 }
 
 function hueGreen() {
-    hue = 90;
-    document.getElementById("productImage").style.filter = `hue-rotate(${hue}deg)`;
+  hue = 90;
+  document.getElementById("productImage").style.filter = `hue-rotate(${hue}deg)`;
 }
 
 function hueWhite() {
-    document.getElementById("productImage").style.filter = `saturate(0) brightness(200%)`;
+  document.getElementById("productImage").style.filter = `saturate(0) brightness(200%)`;
 }
 
 function hueBlack() {
-    document.getElementById("productImage").style.filter = `saturate(0) brightness(0.3)`;
+  document.getElementById("productImage").style.filter = `saturate(0) brightness(0.3)`;
 }
 
 const cart = JSON.parse(localStorage.getItem('shoppingCart')) || [];
@@ -192,5 +192,5 @@ function removeFromCart(itemName) {
   }
 }
 
-// Call on page load to show saved cart
+// Refresh cart
 updateCartDisplay();

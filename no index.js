@@ -6,7 +6,7 @@ const submit = document.querySelector(".search input[type=submit]");
 const navbar = document.querySelector("nav");
 const divup = document.querySelector("div ul up");
 
-window.addEventListener("load", function () {
+window.addEventListener("load", function () { //Big logo on load
   submit.classList.add("inactive");
   divup.classList.add("hiddenup");
   b = 1;
@@ -16,20 +16,20 @@ window.addEventListener("load", function () {
   }, 5000); // Remove .start after 5 seconds
 });
 
-window.addEventListener("scroll", function () {
+window.addEventListener("scroll", function () { //big logo on scroll
 
   if (window.scrollY > 0 && b === 1) {
     //if scroll and .start is active, remove it
     b = 0;
   }
 
-  if (window.scrollY > 475 && b === 0) { //up button removed when scrollpos > 475px
+  if (window.scrollY > 475 && b === 0) { //up button on scroll
     divup.classList.remove("hiddenup");
   } else {
     divup.classList.add("hiddenup");
   }
 
-  if (window.scrollY > 475 && a === 0 && b === 0) { //if scrollpos > 475px, mouse isn't on logo and .start isn't active
+  if (window.scrollY > 475 && a === 0 && b === 0) { //if scrollpos > 475px, mouse isn't on logo and .start isn't active, add hiddennav
     navbar.classList.add("hiddennav");
   } else {
     navbar.classList.remove("hiddennav");
@@ -49,44 +49,62 @@ navbar.addEventListener("mouseleave", function () { //if no longer hovering on l
   }
 });
 
+
+
+// ----------------- SEARCH ----------------
+
+// Listen for user input in the search box
 input.addEventListener("input", () => {
+  // If the input is empty (only whitespace), disable the submit button (by adding 'inactive' class)
   if (input.value.trim() === "") {
     submit.classList.add("inactive");
   } else {
+    // Otherwise, enable the submit button
     submit.classList.remove("inactive");
   }
 });
 
+// Handle the search when the form is submitted
 async function handleSearch(event) {
-  event.preventDefault(); //essential
-  event = event || window.event;
+  event.preventDefault(); // Prevent default form submission (e.g., page reload)
+  event = event || window.event; // Fallback for older browsers (not usually needed anymore)
 
-  const query = document.getElementById('input').value.toLowerCase().trim(); //query = input without spaces and lowercase
+  // Get the search input, convert to lowercase, and trim whitespace
+  const query = document.getElementById('input').value.toLowerCase().trim();
 
-  if (query === "") { //if there's no input, don't do anything
+  // If the input is empty, do nothing
+  if (query === "") {
     return false;
   }
 
   try {
-    const response = await fetch('products.json'); //product list
+    // Fetch the list of products from the JSON file (absolute path from root)
+    const response = await fetch('/products.json');
     const products = await response.json();
 
+    // Try to find a product whose name exactly matches the query
     const match = products.find(product =>
-      product.name.toLowerCase().trim() === query //if the search matches a product in the json file, match gets named to the name of that .html match. If there's no match, it's nothing.
+      product.name.toLowerCase().trim() === query
     );
 
-    if (match) { //if match exists (so not nothing)
-      window.location.href = match.url; //product name from .json file turns into .url
+    if (match) {
+      // If a match is found, redirect the user to the matched product's URL
+      window.location.href = match.url;
     } else {
+      // If no match is found, notify the user
       alert("We couldn't find what you were looking for.");
     }
 
   } catch (error) {
-    alert("Search failed."); //error message
+    // If the fetch fails (file not found, offline, etc.), show an error message
+    alert("We couldn't find what you were looking for.");
   }
 
-  return false;
+  return false; // Prevent further default form behavior
 }
+
+
+//-------------- PRODUCT COLOR ---------------
 
 let hue = 0;
 
@@ -113,84 +131,92 @@ function hueBlack() {
   document.getElementById("productImage").style.filter = `saturate(0) brightness(0.3)`;
 }
 
+
+//------------ SHOPPING CART ------------
+
+
+// Retrieve cart from localStorage or initialize an empty array if none exists
 const cart = JSON.parse(localStorage.getItem('shoppingCart')) || [];
 
+// Save the current cart state to localStorage
 function saveCart() {
   localStorage.setItem('shoppingCart', JSON.stringify(cart));
 }
 
-function addToCart(itemName) { //adds itemname to cart
-  const quantitySelect = document.getElementById('productAmount');
-  const quantity = parseInt(quantitySelect.value);
+// Add an item to the cart (or update quantity if it already exists)
+function addToCart(itemName) {
+  const quantitySelect = document.getElementById('productAmount'); // Quantity selector element
+  const quantity = parseInt(quantitySelect.value);                 // Selected quantity
 
-  //if item is already in cart
+  // Check if the item already exists in the cart
   const existingItem = cart.find(item => item.name === itemName);
 
   if (existingItem) {
-    existingItem.quantity = quantity; // Replace quantity
+    // If it exists, replace the quantity with the new one
+    existingItem.quantity = quantity;
   } else {
-    cart.push({ name: itemName, quantity: quantity }); // Add new item
+    // If it's a new item, add it to the cart
+    cart.push({ name: itemName, quantity: quantity });
   }
 
-  saveCart();            // Save after adding
-  updateCartDisplay();
+  saveCart();            // Save changes to localStorage
+  updateCartDisplay();   // Refresh the cart UI
 }
 
+// Update the cart list in the DOM
 function updateCartDisplay() {
-  const cartList = document.getElementById('cartList');
-  cartList.innerHTML = '';
+  const cartList = document.getElementById('cartList'); // UL or DIV where cart items are listed
+  cartList.innerHTML = ''; // Clear the current list
 
   cart.forEach(item => {
-    const li = document.createElement('li');
+    const li = document.createElement('li'); // Create new list item for each cart entry
 
+    // Display the item name
+    li.textContent = item.name + "     ";
 
-    // Item name
-    li.textContent = (item.name + "     ");
-
-
-    // Decrease button
+    // Create "decrease" (-) button
     const decreaseBtn = document.createElement('button');
     decreaseBtn.textContent = '–';
     decreaseBtn.onclick = () => {
       if (item.quantity > 1) {
-        item.quantity--;
+        item.quantity--; // Decrease quantity
       } else {
-        cart.splice(cart.indexOf(item), 1); // remove if 0
+        cart.splice(cart.indexOf(item), 1); // Remove item from cart if quantity reaches 0
       }
-      saveCart();
-      updateCartDisplay();
+      saveCart();          // Save updated cart
+      updateCartDisplay(); // Refresh display
     };
-    li.appendChild(decreaseBtn);
+    li.appendChild(decreaseBtn); // Add button to list item
 
-
-    // Quantity display
+    // Show current quantity
     const quantitySpan = document.createElement('span');
     quantitySpan.textContent = item.quantity > 0 ? ` (x${item.quantity})` : '';
     li.appendChild(quantitySpan);
 
-
-    // Increase button
+    // Create "increase" (+) button
     const increaseBtn = document.createElement('button');
     increaseBtn.textContent = '+';
     increaseBtn.onclick = () => {
-      item.quantity++;
-      saveCart();
-      updateCartDisplay();
+      item.quantity++;     // Increase quantity
+      saveCart();          // Save updated cart
+      updateCartDisplay(); // Refresh display
     };
     li.appendChild(increaseBtn);
 
+    // Add the completed list item to the cart display
     cartList.appendChild(li);
   });
 }
 
+// Remove an item from the cart by name
 function removeFromCart(itemName) {
   const index = cart.findIndex(item => item.name === itemName);
   if (index !== -1) {
-    cart.splice(index, 1);
-    saveCart();          // Save after removing
-    updateCartDisplay();
+    cart.splice(index, 1); // Remove item from array
+    saveCart();            // Save updated cart
+    updateCartDisplay();   // Refresh display
   }
 }
 
-// Refresh cart
+// on page load, update cart display
 updateCartDisplay();
